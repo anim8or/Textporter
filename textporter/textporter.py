@@ -5,6 +5,10 @@ from PyQt5.QtWidgets import QPushButton, QWidget, QColorDialog, QVBoxLayout, QFo
 from PyQt5 import uic
 from PyQt5.QtGui import QColor, QIcon, QPixmap, QFont
 from PyQt5.QtWidgets import QMessageBox
+import configparser
+import json
+#import fitz  # PyMuPDF for PDF handling
+import re
 
 
 DOCKER_NAME = 'Textporter'
@@ -35,7 +39,13 @@ class ColorSwatchButton(QPushButton):
             self.current_color = color
             self.update_icon()
 
-
+# Dialogue class to represent each dialogue entry
+class Dialogue:
+    def __init__(self, name, dialog_type, text, color):
+        self.name = name
+        self.dialog_type = dialog_type
+        self.text = text
+        self.color = color
 
 class Textporter(DockWidget):
 
@@ -82,8 +92,10 @@ class PluginUIWidget(QWidget):
         self.setWindowTitle("My Custom Plugin with UI")
         DefaultColor = [0, 0, 0]
         self.fontComboBox.setCurrentFont(QFont('Arial'))
-        self.spinBox.setValue(30
-        )
+        self.spinBox.setValue(30)
+        self.default_styles = self.load_default_styles_from_ini("settings.ini")
+        
+        
         #connect buttons to functions
         self.pushButton_3.clicked.connect(self.show_message)
 
@@ -104,6 +116,51 @@ class PluginUIWidget(QWidget):
         else:
             print("No layout found for the parent widget!")
 
+    # Load default character styles from an .ini file
+    def load_default_styles_from_ini(self,file_path):
+        config = configparser.ConfigParser()
+        config.read(file_path)
+        character_styles = {}
+        
+        for section in config.sections():
+            color_str = config.get(section, "color", fallback="0,0,0")
+            color = [int(c) for c in color_str.split(",")]  # Store color as [R, G, B] list
+            character_styles[section] = {
+                "font": config.get(section, "font", fallback="Arial"),
+                "size": config.getint(section, "size", fallback=14),
+                "color": color
+            }
+        
+        # Check if "default" is present, else add a default entry
+        if "default" not in character_styles:
+            character_styles["default"] = {
+                "font": "Arial",
+                "size": 14,
+                "color": [0, 0, 0]
+            }
+        
+        return character_styles
+
+    # Save character styles dictionary to JSON file
+    def save_character_styles_to_json(self,character_styles, json_file_path="character_styles.json"):
+        """
+        Saves the character styles dictionary to a JSON file.
+        Args:
+            character_styles (dict): Dictionary containing character styles and dialogues.
+            json_file_path (str): Path to save the JSON file. Defaults to 'character_styles.json' in the current directory.
+        """
+        try:
+            with open(json_file_path, "w") as json_file:
+                json.dump(character_styles, json_file, indent=4)
+            print(f"Character styles successfully saved to {json_file_path}")
+        except Exception as e:
+            print(f"Error saving character styles to {json_file_path}: {e}")
+
+
+    # Load character styles dictionary from JSON file
+    def load_character_styles_from_json(self,file_path):
+        with open(file_path, "r") as file:
+            return json.load(file)
 
 
 instance = Krita.instance()
