@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>410</width>
+    <height>716</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>570</y>
+     <width>389</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>ABOUT</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget_8">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>20</y>
+      <width>371</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_22">
+           <property name="text">
+            <string>                      </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>T</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>E</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>X</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>T</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="font">
+            <font>
+             <family>MS Serif</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>p</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_15">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>O</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>R</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>T</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_18">
+           <property name="font">
+            <font>
+             <family>Fixedsys</family>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>e</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_19">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>36</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>R</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>V1.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Comic script automation Tool</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>391</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>FILE</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>371</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>Save text info</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>Load text info</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>387</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Defaut Text Settings:</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>371</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QFontComboBox" name="fontComboBox"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Font SIze</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Font colour</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>389</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Analyse Script</string>
+   </property>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>371</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Get Names from script</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Characters in Script:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>NUmber of pages:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Selected Character:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QFontComboBox" name="fontComboBox_2"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Font SIze</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_3"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Font colour</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_4">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string>Set Font</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="hemmingway.qrc"/>
+ </resources>
+ <connections/>
+</ui>
