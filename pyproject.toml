@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "textporter"
+version = "0.1.0"
+description = "Description Here"
+authors = ["Dave Hingley <anim8or_2000@yahoo.co.uk>"]
+license = "TBC"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+configparser = "^7.1.0"
+pymupdf = "^1.24.13"
+krita = {git = "https://github.com/rbreu/krita-python-mock.git"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
