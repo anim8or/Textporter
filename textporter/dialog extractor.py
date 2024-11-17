@@ -2,29 +2,36 @@ import configparser
 import json
 import fitz  # PyMuPDF for PDF handling
 import re
-from krita import Krita
+
 
 # Load default character styles from an .ini file
-def load_default_styles_from_ini(file_path):
+def load_default_styles_from_ini( file_path):
+    Krita.instance().messageBox(f"file_path")
+    
+    with open("/home/dave/.local/share/krita/pykrita/textporter/log_file.txt", "a") as log_file:
+    log_file.write(log_file)
+    #log_file.write(f"{character_styles}\n")
+    
     config = configparser.ConfigParser()
     config.read(file_path)
     character_styles = {}
     
     for section in config.sections():
-        color_str = config.get(section, "color", fallback="0,0,0")
-        color = [int(c) for c in color_str.split(",")]  # Store color as [R, G, B] list
+        color_str = config.get(section, "color", fallback="[255,0,0]")
+        color = json.loads(color_str)  # Convert string to list
+
         character_styles[section] = {
             "font": config.get(section, "font", fallback="Arial"),
-            "size": config.getint(section, "size", fallback=14),
+            "size": config.getint(section, "size", fallback=20),
             "color": color
         }
-    
-    # Check if "default" is present, else add a default entry
+    #self.show_message(self,character_styles)
+    # If "default" isn't in character_styles, add it with expected values
     if "default" not in character_styles:
         character_styles["default"] = {
             "font": "Arial",
-            "size": 14,
-            "color": [0, 0, 0]
+            "size": 10,
+            "color": [0, 255, 0]
         }
     
     return character_styles
@@ -161,7 +168,7 @@ def add_dialogue_to_krita(pdf_file, page_ranges):
 if __name__ == "__main__":
     # Load default styles from .ini file
     default_styles = load_default_styles_from_ini("settings.ini")
-    print(default_styles)
+    print(default_styles['default'])
     print("------------------------")
     # Path to the PDF file
     pdf_file = "/home/dave/Documents/Comic Jams/366_DungeonsAndBreakfast/Mimosa_FernNorfolk.docx.pdf"
